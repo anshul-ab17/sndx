@@ -1,8 +1,11 @@
 {
-  "name": "server",
+  "name": "@repo/cron",
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "exports":{
+    "./cleanup":"./cacheCleanup"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
@@ -10,8 +13,6 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "@types/express": "^5.0.6",
-    "express": "^5.2.1",
-    "@repo/cache":"*"
+    "node-cron": "^4.2.1"
   }
 }

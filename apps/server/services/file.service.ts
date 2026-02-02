@@ -17,7 +17,6 @@ export async function fetchFile(id: string) {
     };
 }
 
-export async function removeFile(id: string) {
-    // delete from storage
+export async function removeFile(id: string) { 
     return true;
 }

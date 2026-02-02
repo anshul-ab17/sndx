@@ -1,5 +1,10 @@
 import { createApp } from "./app";
-const PORT =Number(process.env.port) || 3001;
+import { startCacheCleanupCron } from "@repo/cron/cacheCleanup";
 
-const app =createApp();
-app.listen(PORT);
+const PORT = Number(process.env.PORT) || 3001;
+const app = createApp();
+
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+    startCacheCleanupCron();
+});
