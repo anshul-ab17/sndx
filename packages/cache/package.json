@@ -1,12 +1,19 @@
 {
-  "name": "cache",
+  "name": "@repo/cache",
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "exports":{
+    ".":"./index.ts",
+    "./cache":"./index.ts"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "dependencies": {
+    "redis": "^5.10.0"
   }
 }
