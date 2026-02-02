@@ -1,41 +1,9 @@
-import { Router, type Request, type Response } from "express";
+import { Router } from "express";
+import { createNote, getNotes } from "../controllers/note.controller";
 
 const router = Router();
 
-router.get("/", (_req: Request, res: Response) => {
-    res.json({
-        notes: [],
-        message: "All notes"
-    });
-});
-
-
-router.post("/", (req: Request, res: Response) => {
-    const { title, content } = req.body;
-
-    res.status(201).json({
-        message: "Note created",
-        note: { title, content }
-    });
-});
-
-
-router.get("/:id", (req: Request, res: Response) => {
-    const { id } = req.params;
-
-    res.json({
-        message: "Single note",
-        id
-    });
-});
-
-router.delete("/:id", (req: Request, res: Response) => {
-    const { id } = req.params;
-
-    res.json({
-        message: "Note deleted",
-        id
-    });
-});
+router.get("/", getNotes);
+router.post("/", createNote);
 
 export default router;
