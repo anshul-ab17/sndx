@@ -1,6 +1,5 @@
-import { App } from "./app";
-
+import { createApp } from "./app";
 const PORT =Number(process.env.port) || 3001;
-const app =App();
 
+const app =createApp();
 app.listen(PORT);
