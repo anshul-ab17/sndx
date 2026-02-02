@@ -1,0 +1,17 @@
+{
+  "name": "@repo/db",
+  "private": true,
+  "exports": {
+    ".": "./index.ts",
+    "./client": "./index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@prisma/client": "^7.3.0"
+  }
+}

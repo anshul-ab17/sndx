@@ -22,6 +22,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "node-cron": "^4.2.1"
+    "node-cron": "^4.2.1",
+    "prisma": "^7.3.0"
   }
 }
